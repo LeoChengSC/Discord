@@ -1,0 +1,245 @@
+@import url('https://plusinsta.github.io/discord-plus/src/DiscordPlus-source.theme.css');
+@import url("https://discordstyles.github.io/FrostedGlass/dist/FrostedGlass.css");
+
+
+:root {
+  --dplus-font-ui: 'Poppins', 'gg sans', sans-serif;
+  --dplus-font-body: 'Roboto', 'gg sans', sans-serif;
+  --dplus-font-header: 'Righteous', 'Whitney', 'Helvetica Neue', sans-serif;
+
+  --dplus-spacing-ui: 8px;
+  --dplus-spacing-app: 10px;
+
+  --dplus-radius-ui: 12px;
+  --dplus-radius-avatar: 24%;
+  --dplus-radius-server: 24%;
+
+  --window-padding: 15px;
+  --window-roundness: 12px;
+
+  --background-image: url('https://i.ibb.co/1yMXFFr/Moonlit-Dusk-2018.webp');
+  --background-image-size: cover;
+  --background-image-position: center;
+  --background-image-blur: 2px;
+
+  --serverlist-brightness: 0.85;
+  --left-brightness: 0.85;
+  --middle-brightness: 0.70;
+  --right-brightness: 0.60;
+  --popout-modal-brightness: 0.75;
+  --overlay-brightness: 0.6;
+
+  --gradient-primary: 320, 60%, 31%;
+  --gradient-secondary: 210, 60%, 35%;
+  --gradient-direction: 135deg;
+
+  --tint-colour: 320, 60%, 31%;
+  --tint-brightness: 0.15;
+
+  --dplus-accent-color-hue: 320;
+  --dplus-accent-color-saturation: 60%;
+  --dplus-accent-color-lightness: 31%;
+
+  --dplus-background-color-hue: 320;
+  --dplus-background-color-saturation-amount: 1;
+  --dplus-background-color-lightness-amount: 1;
+  --dplus-background-color-alpha: 0.75;
+
+  --dplus-foreground-color-hue-base: 210;
+  --dplus-foreground-color-hue-links: 197;
+  --dplus-foreground-color-saturation-amount: 1;
+  --dplus-foreground-color-lightness-amount: 1;
+
+  --foreground-half: rgba(255, 255, 255, 0.03);
+  --foreground: rgba(255, 255, 255, 0.06);
+  --foreground-double: rgba(255, 255, 255, 0.12);
+  --foreground-triple: rgba(255, 255, 255, 0.18);
+  --dplus-icon-avatar-chat: 64px;
+  --dplus-icon-avatar-list: 32px;
+  --dplus-icon-avatar-profile: 80px;
+
+  --blur-ui: 8px;
+  --blur-popout: 12px;
+  --blur-modal: 16px;
+
+  --scrollbar-colour: rgba(255, 255, 255, 0.08);
+  --scrollbar-width: 6px;
+}
+
+.theme-dark {
+  --dplus-accent-color-hue: 320;
+  --dplus-accent-color-saturation: 60%;
+  --dplus-accent-color-lightness: 31%;
+
+  --dplus-background-color-hue: 320;
+  --dplus-background-color-alpha: 0.75;
+
+  --dplus-foreground-color-hue-base: 210;
+  --dplus-foreground-color-hue-links: 197;
+
+  --serverlist-brightness: 0.85;
+  --left-brightness: 0.85;
+  --middle-brightness: 0.70;
+  --right-brightness: 0.60;
+  --popout-modal-brightness: 0.75;
+}
+
+
+.theme-light {
+  --dplus-accent-color-hue: 200;
+  --dplus-accent-color-saturation: 70%;
+  --dplus-accent-color-lightness: 45%;
+
+  --dplus-background-color-hue: 200;
+  --dplus-background-color-alpha: 0.85;
+
+  --dplus-foreground-color-hue-base: 220;
+  --dplus-foreground-color-hue-links: 210;
+
+  --serverlist-brightness: 0.95;
+  --left-brightness: 0.95;
+  --middle-brightness: 0.90;
+  --right-brightness: 0.85;
+  --popout-modal-brightness: 0.92;
+
+  --background-image: url('https://i.ibb.co/CKzkqnyk/Dawn-2020.webp');
+
+  --foreground-half: rgba(0, 0, 0, 0.03);
+  --foreground: rgba(0, 0, 0, 0.06);
+  --foreground-double: rgba(0, 0, 0, 0.12);
+  --foreground-triple: rgba(0, 0, 0, 0.18);
+
+  --scrollbar-colour: rgba(0, 0, 0, 0.1);
+}
+
+
+:root {
+  --gradient: linear-gradient(
+    var(--gradient-direction),
+    hsl(var(--gradient-primary)),
+    hsl(var(--gradient-secondary))
+  );
+
+  --gradient-20: linear-gradient(
+    var(--gradient-direction),
+    hsla(var(--gradient-primary), 0.2),
+    hsla(var(--gradient-secondary), 0.2)
+  );
+
+  --gradient-50: linear-gradient(
+    var(--gradient-direction),
+    hsla(var(--gradient-primary), 0.5),
+    hsla(var(--gradient-secondary), 0.5)
+  );
+
+  --gradient-90: linear-gradient(
+    var(--gradient-direction),
+    hsla(var(--gradient-primary), 0.9),
+    hsla(var(--gradient-secondary), 0.9)
+  );
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Righteous&display=swap');
+
+
+#app-mount .layer__960e4 {
+  top: var(--window-padding);
+  right: var(--window-padding);
+  bottom: var(--window-padding);
+  left: var(--window-padding);
+  padding-top: 0;
+  overflow: hidden;
+  border-radius: var(--window-roundness);
+}
+
+#app-mount .bg__960e4 {
+  top: -22px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--background-image);
+  background-position: var(--background-image-position, center);
+  background-size: var(--background-image-size, cover);
+}
+
+#app-mount .bg__960e4::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--window-padding) + 22px);
+  right: var(--window-padding);
+  bottom: var(--window-padding);
+  left: var(--window-padding);
+  border-radius: var(--window-roundness);
+  backdrop-filter: blur(var(--background-image-blur));
+  box-shadow: inset 0 0 0 100vmax rgba(255, 255, 255, var(--tint-brightness));
+  pointer-events: none;
+}
+
+
+::-webkit-scrollbar {
+  width: var(--scrollbar-width) !important;
+  height: var(--scrollbar-width) !important;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece {
+  border-color: transparent !important;
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: var(--scrollbar-width) !important;
+  border: none !important;
+  background-clip: content-box !important;
+  background: var(--scrollbar-colour) !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+::-webkit-scrollbar-corner {
+  visibility: hidden !important;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: var(--dplus-font-body), "gg sans", sans-serif;
+}
